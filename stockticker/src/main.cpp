@@ -1,18 +1,20 @@
 #include <Arduino.h>
-
-// put function declarations here:
-int myFunction(int, int);
+#include "ledDisplay.h"
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+    Serial.begin(115200);
+    initLEDDisplay();
+    displayText("Hello, ESP32!", 5, 10, 0xF800);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-}
+    static int x = 5;
+    static int dir = 1;
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+    displayText("Mhyyhhyhyhy", x, 100, 0x07E0);
+
+    x += dir;
+    if (x > 50 || x < 5) dir = -dir;
+
+    delay(100);
 }
