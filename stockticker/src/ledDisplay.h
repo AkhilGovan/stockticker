@@ -22,8 +22,4 @@
 #define LAT D_15
 #define OE  D_2
 
-// Function to initialize the LED display
-void initLEDDisplay();
-
-// Function to display text
-void displayText(const char *text, int x, int y, uint16_t color);
+extern MatrixPanel_I2S_DMA *matrix;
