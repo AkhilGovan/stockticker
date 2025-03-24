@@ -18,7 +18,6 @@
 #define B   D_19
 #define C   D_5
 #define D   D_17
-#define E   D_16
 #define CLK D_4
 #define LAT D_15
 #define OE  D_2
